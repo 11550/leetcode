@@ -3,40 +3,31 @@ package easy;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class TwoSumTest {
 
+    private static Stream<Arguments> twoSumCase_shouldBeEquals() {
+        return Stream.of(
+                Arguments.of(new int[]{2, 7, 11, 15}, 9, new int[]{0, 1}),
+                Arguments.of(new int[]{3, 2, 4}, 6, new int[]{1, 2}),
+                Arguments.of(new int[]{3, 3}, 6, new int[]{0, 1})
+        );
+    }
+
     private final TwoSum twoSum = new TwoSum();
 
-    @Test
-    void twoSumCase1() {
-        // case 1 nums = [2,7,11,15], target = 9
-        int[] case1 = twoSum.twoSum(new int[]{2, 7, 11, 15}, 9);
-        int[] expected1 = {0, 1};
-        Arrays.sort(case1);
-        Arrays.sort(expected1);
-        assertArrayEquals(case1, expected1);
-    }
-
-    @Test
-    void twoSumCase2() {
-        // case 2 nums = [3,2,4], target = 6
-        int[] case2 = twoSum.twoSum(new int[]{3, 2, 4}, 6);
-        int[] expected2 = {1, 2};
-        Arrays.sort(case2);
-        Arrays.sort(expected2);
-        assertArrayEquals(case2, expected2);
-    }
-
-    @Test
-    void twoSumCase3() {
-        // case 3 nums = [3,3], target = 6
-        int[] case3 = twoSum.twoSum(new int[]{3, 3}, 6);
-        int[] expected3 = {0, 1};
-        Arrays.sort(case3);
-        Arrays.sort(expected3);
-        assertArrayEquals(case3, expected3);
+    @ParameterizedTest
+    @MethodSource
+    void twoSumCase_shouldBeEquals(int[] source, int target, int[] expected) {
+        int[] actual = twoSum.twoSum(source, target);
+        Arrays.sort(actual);
+        Arrays.sort(expected);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
