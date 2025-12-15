@@ -1,6 +1,5 @@
 package easy;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,28 +38,6 @@ class TwoSum {
             map.put(nums[i], i);
         }
         throw new RuntimeException("There are no results");
-    }
-
-    public static void main(String[] args) {
-        TwoSum twoSum = new TwoSum();
-        // case 1 nums = [2,7,11,15], target = 9
-        int[] case1 = twoSum.twoSum(new int[]{2, 7, 11, 15}, 9);
-        int[] expected1 = {0, 1};
-        System.out.println(compareArraysIgnoreCase(case1, expected1));
-        // case 2 nums = [3,2,4], target = 6
-        int[] case2 = twoSum.twoSum(new int[]{3, 2, 4}, 6);
-        int[] expected2 = {1, 2};
-        System.out.println(compareArraysIgnoreCase(case2, expected2));
-        // case 3 nums = [3,3], target = 6
-        int[] case3 = twoSum.twoSum(new int[]{3, 3}, 6);
-        int[] expected3 = {0, 1};
-        System.out.println(compareArraysIgnoreCase(case3, expected3));
-    }
-
-    private static boolean compareArraysIgnoreCase(int[] result, int[] expected) {
-        Arrays.sort(result);
-        Arrays.sort(expected);
-        return Arrays.equals(result, expected);
     }
 
 }
