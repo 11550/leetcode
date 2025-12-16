@@ -9,8 +9,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 class LongestCommonPrefixTest {
 
-    private final LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
-
     private static Stream<Arguments> longestCommonPrefix_shouldBeEquals() {
         return Stream.of(
                 Arguments.of(new String[]{"flower","flow","flight"}, "fl"),
@@ -18,6 +16,8 @@ class LongestCommonPrefixTest {
                 Arguments.of(new String[]{"dog","racecar","car"}, "")
         );
     }
+
+    private final LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
 
     @ParameterizedTest
     @MethodSource
