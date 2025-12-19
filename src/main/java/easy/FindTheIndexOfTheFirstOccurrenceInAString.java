@@ -22,6 +22,8 @@ package easy;
  *
  * 1 <= haystack.length, needle.length <= 104
  * haystack and needle consist of only lowercase English characters.
+ *
+ * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
  */
 class FindTheIndexOfTheFirstOccurrenceInAString {
 

@@ -43,6 +43,8 @@ package easy;
  * 1 <= nums.length <= 3 * 104
  * -100 <= nums[i] <= 100
  * nums is sorted in non-decreasing order.
+ *
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  */
 class RemoveDuplicatesFromSortedArray {
 

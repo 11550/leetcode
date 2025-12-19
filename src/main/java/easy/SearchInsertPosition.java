@@ -27,6 +27,8 @@ package easy;
  * -104 <= nums[i] <= 104
  * nums contains distinct values sorted in ascending order.
  * -104 <= target <= 104
+ *
+ * https://leetcode.com/problems/search-insert-position/
  */
 class SearchInsertPosition {
 

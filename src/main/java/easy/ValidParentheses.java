@@ -52,6 +52,8 @@ import java.util.Objects;
  *
  * 1 <= s.length <= 104
  * s consists of parentheses only '()[]{}'.
+ *
+ * https://leetcode.com/problems/valid-parentheses/
  */
 class ValidParentheses {
 
