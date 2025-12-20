@@ -11,14 +11,14 @@ class SqrtTest {
 
     private static Stream<Arguments> mySqrt_shouldBeEquals() {
         return Stream.of(
-//                Arguments.of(0, 0),
-//                Arguments.of(4, 2),
-//                Arguments.of(8, 2),
-//                Arguments.of(9, 3),
-//                Arguments.of(16, 4),
-//                Arguments.of(25, 5),
-//                Arguments.of(48, 6),
-//                Arguments.of(49, 7),
+                Arguments.of(0, 0),
+                Arguments.of(4, 2),
+                Arguments.of(8, 2),
+                Arguments.of(9, 3),
+                Arguments.of(16, 4),
+                Arguments.of(25, 5),
+                Arguments.of(48, 6),
+                Arguments.of(49, 7),
                 Arguments.of(2147483647, 46340)
         );
     }
