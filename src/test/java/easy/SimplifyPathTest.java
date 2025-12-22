@@ -11,11 +11,11 @@ class SimplifyPathTest {
 
     private static Stream<Arguments> simplifyPath_shouldBeEquals() {
         return Stream.of(
-//                Arguments.of("/home/", "/home"),
-//                Arguments.of("/home//foo/", "/home/foo"),
-//                Arguments.of("/home/user/Documents/../Pictures", "/home/user/Pictures"),
-//                Arguments.of("/../", "/"),
-//                Arguments.of("/a/./b/../../c/", "/c"),
+                Arguments.of("/home/", "/home"),
+                Arguments.of("/home//foo/", "/home/foo"),
+                Arguments.of("/home/user/Documents/../Pictures", "/home/user/Pictures"),
+                Arguments.of("/../", "/"),
+                Arguments.of("/a/./b/../../c/", "/c"),
                 Arguments.of("/a//b////c/d//././/..", "/a/b/c"),
                 Arguments.of("/.../a/../b/c/../d/./", "/.../b/d")
         );
