@@ -1,7 +1,4 @@
-package easy;
-
-import java.util.HashSet;
-import java.util.Set;
+package medium;
 
 /**
  * You are given an m x n integer matrix matrix with the following two properties:

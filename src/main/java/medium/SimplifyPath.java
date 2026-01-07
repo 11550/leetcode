@@ -1,11 +1,9 @@
-package easy;
+package medium;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.Objects;
 import java.util.Queue;
 import java.util.stream.Collectors;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * You are given an absolute path for a Unix-style file system, which always begins with a slash '/'. Your task is to transform this absolute path into its simplified canonical path.
